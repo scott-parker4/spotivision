@@ -3,8 +3,16 @@ html {
   font-size: 10px;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .main_container {
-  margin: 0 auto;
-  width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   font-size: 2rem;
+  background-color: black;
 }

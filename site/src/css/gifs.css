@@ -1,4 +1,4 @@
-img {
-  object-fit: cover;
-  border-radius: 0.5rem;
+.gifs img {
+  object-fit: contain;
+  width: 500px;
 }

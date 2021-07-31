@@ -3,6 +3,7 @@ import SpotifyWebApi from 'spotify-web-api-node';
 import useAuth from './useAuth';
 import TrackSearchResult from './TrackSearchResult';
 import Player from './Player';
+import './css/dashboard.css';
 
 const spotifyApi = new SpotifyWebApi({
   clientId: 'cb4b7f6508944aa380ace0748edb7452',
@@ -55,26 +56,28 @@ export default function Dashboard({ code }) {
   }, [search, accessToken]);
 
   return (
-    <div>
+    <div className="dashboardContainer">
       <Player
         accessToken={accessToken}
         trackUri={playingTrack?.uri}
         playingTrack={playingTrack}
       />
-      <input
-        type="search"
-        placeholder="search"
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
-      <div className="songs">
-        {searchResults.map((track) => (
-          <TrackSearchResult
-            track={track}
-            key={track.uri}
-            chooseTrack={chooseTrack}
-          />
-        ))}
+      <div className="searchBox">
+        <input
+          type="search"
+          placeholder="search"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+        <div className="songs">
+          {searchResults.map((track) => (
+            <TrackSearchResult
+              track={track}
+              key={track.uri}
+              chooseTrack={chooseTrack}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

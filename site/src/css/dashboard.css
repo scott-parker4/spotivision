@@ -1,0 +1,24 @@
+.dashboardContainer {
+  display: flex;
+  max-height: 500px;
+  padding: 2rem;
+  background-color: brown;
+}
+
+.searchBox {
+  overflow: auto;
+  width: 300px;
+  position: relative;
+}
+
+input {
+  width: 100%;
+  position: absolute;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+.songs {
+  padding-top: 40px;
+}

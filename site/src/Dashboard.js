@@ -56,6 +56,11 @@ export default function Dashboard({ code }) {
 
   return (
     <div>
+      <Player
+        accessToken={accessToken}
+        trackUri={playingTrack?.uri}
+        playingTrack={playingTrack}
+      />
       <input
         type="search"
         placeholder="search"
@@ -71,12 +76,6 @@ export default function Dashboard({ code }) {
           />
         ))}
       </div>
-
-      <Player
-        accessToken={accessToken}
-        trackUri={playingTrack?.uri}
-        playingTrack={playingTrack}
-      />
     </div>
   );
 }

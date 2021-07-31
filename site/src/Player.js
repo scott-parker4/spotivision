@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import SpotifyPlayer from 'react-spotify-web-playback';
 import Gifs from './Gifs';
+import './css/player.css';
 
 export default function Player({ accessToken, trackUri, playingTrack }) {
   const [play, setPlay] = useState(false);
@@ -9,17 +10,21 @@ export default function Player({ accessToken, trackUri, playingTrack }) {
 
   if (!accessToken) return null;
   return (
-    <>
-      <Gifs playingTrack={playingTrack} play={play} />
-      <SpotifyPlayer
-        token={accessToken}
-        showSaveIcon
-        callback={(state) => {
-          !state.isPlaying ? setPlay(false) : setPlay(true);
-        }}
-        play={play}
-        uris={trackUri ? [trackUri] : []}
-      />
-    </>
+    <div className="player_container">
+      <div className="gif_container">
+        <Gifs playingTrack={playingTrack} play={play} />
+      </div>
+      <div className="spotify_player_container">
+        <SpotifyPlayer
+          token={accessToken}
+          showSaveIcon
+          callback={(state) => {
+            !state.isPlaying ? setPlay(false) : setPlay(true);
+          }}
+          play={play}
+          uris={trackUri ? [trackUri] : []}
+        />
+      </div>
+    </div>
   );
 }

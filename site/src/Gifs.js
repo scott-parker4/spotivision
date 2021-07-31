@@ -1,9 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './css/gifs.css';
 
 export default function Gifs({ playingTrack, play }) {
   const [gifs, setGifs] = useState();
   const [gifInterval, setGifInterval] = useState(0);
+
+  if (gifInterval >= gifs?.length - 1) setGifInterval(0);
+
+  useEffect(() => {
+    if (play) {
+      const id = window.setInterval(() => {
+        setGifInterval((gifInterval) => gifInterval + 1);
+      }, 5000);
+      return () => window.clearInterval(id);
+    }
+  }, [play]);
 
   useEffect(() => {
     if (!playingTrack) return;
@@ -35,22 +47,21 @@ export default function Gifs({ playingTrack, play }) {
     fetchGifs();
   }, [playingTrack]);
 
-  /* const gifPlay = () => {
-    if (!play) return
-    if (gifInterval === gifs.length ) setGifInterval(0)
-    setGifInterval(gifInterval + 1)
-}
-
-setInterval(gifPlay, 5000) */
-  // console.log(gifInterval)
+  console.log(gifInterval);
 
   return (
     <div>
       {!play && (
-        <img src="https://media.giphy.com/media/Ph0oIVQeuvh0k/giphy.gif" />
+        <img
+          src="https://media.giphy.com/media/Ph0oIVQeuvh0k/giphy.gif"
+          alt="static gif"
+        />
       )}
       {gifs !== undefined && play && (
-        <img src={gifs[gifInterval].images.fixed_height.url} />
+        <img
+          src={gifs[gifInterval].images.original.url}
+          alt={playingTrack.title}
+        />
       )}
     </div>
   );

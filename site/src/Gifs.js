@@ -59,12 +59,14 @@ export default function Gifs({ playingTrack, play }) {
         <img
           src="https://media.giphy.com/media/Ph0oIVQeuvh0k/giphy.gif"
           alt="static gif"
+          className="playingGif"
         />
       )}
       {gifs !== undefined && play && (
         <img
           src={gifs[gifInterval].images.original.url}
           alt={playingTrack.title}
+          className="playingGif"
         />
       )}
     </div>

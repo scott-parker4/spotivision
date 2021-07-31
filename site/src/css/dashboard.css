@@ -1,13 +1,15 @@
 .dashboardContainer {
   display: flex;
-  max-height: 500px;
-  padding: 2rem;
+  width: 70%;
+  max-height: 600px;
+  padding: 2.5rem;
   background-color: brown;
 }
 
 .searchBox {
   overflow: auto;
-  width: 300px;
+  width: 30%;
+  max-height: 100%;
   position: relative;
 }
 
@@ -21,4 +23,5 @@ input {
 
 .songs {
   padding-top: 40px;
+  width: 100%;
 }

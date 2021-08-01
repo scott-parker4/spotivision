@@ -1,14 +1,25 @@
 .resultBox {
   display: flex;
+  color: white;
+  margin-bottom: 10px;
 }
 
 .artistTitleBox {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
 }
 
 .artistTitleBox p {
   margin: 5px 0 5px 20px;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.artistTitleBox p:first-child {
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+.artistTitleBox p:last-child {
+  margin-bottom: 0;
 }
 
 .resultImg {

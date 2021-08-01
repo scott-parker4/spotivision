@@ -9,8 +9,8 @@ export default function TrackSearchResult({ track, chooseTrack }) {
     <div className="resultBox" onClick={handlePlay}>
       <img className="resultImg" src={track.albumUrl} alt={track.title} />
       <div className="artistTitleBox">
-        <p>{track.artist}</p>
         <p>{track.title}</p>
+        <p>{track.artist}</p>
       </div>
     </div>
   );

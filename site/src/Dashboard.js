@@ -58,23 +58,28 @@ export default function Dashboard({ code }) {
   return (
     <div className="dashboardContainer">
       <div className="playerSearchContainer">
-        <div className="searchBox">
-          <input
-            type="search"
-            placeholder="search"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
-          <div className="songs">
-            {searchResults.map((track) => (
-              <TrackSearchResult
-                track={track}
-                key={track.uri}
-                chooseTrack={chooseTrack}
-              />
-            ))}
+        <aside className="sideBar">
+          <header>
+            <h1>SPOTIVISION</h1>
+            <input
+              type="search"
+              placeholder="search"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+            />
+          </header>
+          <div className="searchBox">
+            <div className="songs">
+              {searchResults.map((track) => (
+                <TrackSearchResult
+                  track={track}
+                  key={track.uri}
+                  chooseTrack={chooseTrack}
+                />
+              ))}
+            </div>
           </div>
-        </div>
+        </aside>
         <Player
           accessToken={accessToken}
           trackUri={playingTrack?.uri}

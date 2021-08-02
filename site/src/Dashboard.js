@@ -46,7 +46,7 @@ export default function Dashboard({ code }) {
             artist: track.artists[0].name,
             title: track.name,
             uri: track.uri,
-            albumUrl: smallestAlbumImage.url,
+            albumUrl: smallestAlbumImage?.url,
           };
         })
       );
@@ -63,7 +63,7 @@ export default function Dashboard({ code }) {
             <h1>SPOTIVISION</h1>
             <input
               type="search"
-              placeholder="search"
+              placeholder="Search for songs"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
             />

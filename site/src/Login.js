@@ -8,8 +8,13 @@ export default function Login() {
   return (
     <div className="loginContainer">
       <h1 className="loginLogo">SPOTIVISION</h1>
+      <p>
+        Watch a constantly changing stream of related gifs while you listen to
+        your favorite songs on Spotify! To get started, log in to your Spotify
+        account.
+      </p>
       <a href={AUTH_URL} className="loginButton">
-        Login with spotify
+        Login with Spotify
       </a>
     </div>
   );

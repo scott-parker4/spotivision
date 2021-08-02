@@ -14,7 +14,7 @@ export default function Login() {
         account.
       </p>
       <a href={AUTH_URL} className="loginButton">
-        Login with Spotify
+        Log in with Spotify
       </a>
     </div>
   );

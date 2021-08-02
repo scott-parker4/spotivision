@@ -17,8 +17,21 @@
 
 .searchBox {
   overflow: auto;
-  padding: 1rem;
+  padding: 1.5rem;
   position: relative;
+}
+
+header {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  color: white;
+  background-color: var(--black);
+  padding: 1.25rem;
+}
+
+.mainLogo {
+  margin: 1.5rem 0;
 }
 
 input {
@@ -30,6 +43,8 @@ input {
   font-weight: 400;
   color: white;
   font-family: inherit;
+  margin-bottom: 1rem;
+  margin-top: 8em;
 }
 
 input::placeholder {

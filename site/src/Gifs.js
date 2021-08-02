@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './css/gifs.css';
+import formatString from './utils/formatSearch';
 
 export default function Gifs({ playingTrack, play }) {
   const [gifs, setGifs] = useState();
@@ -20,8 +21,8 @@ export default function Gifs({ playingTrack, play }) {
   useEffect(() => {
     if (!playingTrack) return;
 
-    const artist = playingTrack.artist.split(' ').join('+');
-    const title = playingTrack.title.split(' ').join('+');
+    const artist = formatString(playingTrack.artist);
+    const title = formatString(playingTrack.title);
     const combo = `${artist}+${title}`;
     const comboTrim = combo.length > 50 ? combo.substring(0, 50) : combo;
 

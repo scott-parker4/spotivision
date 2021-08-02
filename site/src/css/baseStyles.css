@@ -1,5 +1,5 @@
 :root {
-  --green: rgb(29, 185, 84);
+  --green: rgba(29, 185, 84, 1);
   --black: rgb(18, 18, 18);
   --darkGrey: rgb(33, 33, 33);
   --mediumGrey: rgb(83, 83, 83);
@@ -24,4 +24,8 @@ body {
   height: 100vh;
   font-size: 2rem;
   background-color: var(--black);
+}
+
+a {
+  text-decoration: none;
 }

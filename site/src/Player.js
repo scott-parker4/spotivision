@@ -25,11 +25,11 @@ export default function Player({ accessToken, trackUri, playingTrack }) {
           uris={trackUri ? [trackUri] : []}
           styles={{
             activeColor: '#fff',
-            bgColor: '#333',
+            bgColor: 'rgb(33, 33, 33)',
             color: '#fff',
             loaderColor: '#fff',
-            sliderColor: '#1cb954',
-            trackArtistColor: '#ccc',
+            sliderColor: 'rgb(29, 185, 84)',
+            trackArtistColor: 'rgb(179, 179, 179)',
             trackNameColor: '#fff',
             height: '75px',
           }}

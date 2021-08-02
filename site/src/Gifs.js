@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './css/gifs.css';
 import formatString from './utils/formatSearch';
+import shuffle from './utils/shuffle';
 
 export default function Gifs({ playingTrack, play }) {
   const [gifs, setGifs] = useState();
@@ -46,14 +47,14 @@ export default function Gifs({ playingTrack, play }) {
         resultsArtist.data.data
       );
       console.log(combined);
-      setGifs(combined.sort((a, b) => 0.5 - Math.random()));
+      setGifs(shuffle(combined));
     };
 
     fetchGifs();
   }, [playingTrack]);
 
   console.log(gifInterval);
-
+  console.log(gifs);
   return (
     <div className="gifs">
       {!play && (

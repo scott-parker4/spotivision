@@ -8,6 +8,10 @@ const app = express()
 app.use(cors())
 app.use(bodyParser.json())
 
+app.get('/', (req, res) => {
+    res.send("Hello World")
+})
+
 app.post('/refresh', (req, res) => {
     const refreshToken = req.body.refreshToken
     const spotifyApi = new SpotifyWebApi({

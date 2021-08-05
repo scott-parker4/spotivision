@@ -3,10 +3,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   width: 100%;
   background-color: black;
   overflow: hidden;
+  height: 100%;
 }
 
 .gif_container {
@@ -19,4 +19,49 @@
 
 .spotify_player_container {
   width: 100%;
+}
+
+.mobileSearch {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .player_container {
+    margin-right: 0;
+  }
+
+  /* .spotify_player_container {
+    height: 20%;
+  } */
+
+  .PlayerRSWP {
+    height: 100%;
+  }
+
+  .mobileSearch {
+    display: initial;
+    position: absolute;
+    max-width: 100%;
+    width: 100%;
+    min-width: 375px;
+    overflow: auto;
+    padding: 0;
+    max-height: 100%;
+    z-index: 100;
+  }
+
+  .mobileSearch::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: var(--black);
+  }
+
+  .mobileSearch::-webkit-scrollbar {
+    width: 8px;
+    background-color: var(--black);
+  }
+
+  .mobileSearch::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--mediumGrey);
+  }
 }

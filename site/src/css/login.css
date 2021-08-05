@@ -15,7 +15,7 @@
 }
 
 .loginButton {
-  width: 25%;
+  width: 40%;
   padding: 2rem;
   border-radius: 2rem;
   text-align: center;
@@ -30,4 +30,39 @@
 
 .loginLogo {
   font-size: 6rem;
+}
+
+@media screen and (max-width: 800px) {
+  .loginLogo {
+    font-size: 4rem;
+  }
+
+  .loginContainer p {
+    font-size: 1.75rem;
+    width: 50%;
+  }
+
+  .loginButton {
+    font-size: 1.5rem;
+    padding: 1.75rem;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .loginLogo {
+    font-size: 3rem;
+  }
+
+  .loginContainer p {
+    font-size: 1.5rem;
+    width: 60%;
+  }
+
+  .loginButton {
+    font-size: 1.25rem;
+    padding: 1.25rem;
+    border-radius: 1.5rem;
+    width: 60%;
+  }
 }

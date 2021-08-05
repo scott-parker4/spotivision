@@ -84,6 +84,8 @@ export default function Dashboard({ code }) {
           accessToken={accessToken}
           trackUri={playingTrack?.uri}
           playingTrack={playingTrack}
+          searchResults={searchResults}
+          chooseTrack={chooseTrack}
         />
       </div>
     </div>

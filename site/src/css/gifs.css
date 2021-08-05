@@ -9,4 +9,19 @@
   align-items: center;
   justify-content: center;
   height: 100%;
+  width: 100%;
 }
+
+@media screen and (max-width: 600px) {
+  .playingGif {
+    height: auto;
+    width: 100%;
+  }
+}
+
+/* @media screen and (max-width: 450px) {
+  .playingGif {
+    height: 100%;
+    width: auto;
+  }
+} */

@@ -2,8 +2,15 @@ import React, { useState, useEffect } from 'react';
 import SpotifyPlayer from 'react-spotify-web-playback';
 import Gifs from './Gifs';
 import './css/player.css';
+import TrackSearchResult from './TrackSearchResult';
 
-export default function Player({ accessToken, trackUri, playingTrack }) {
+export default function Player({
+  accessToken,
+  trackUri,
+  playingTrack,
+  searchResults,
+  chooseTrack,
+}) {
   const [play, setPlay] = useState(false);
 
   useEffect(() => setPlay(true), [trackUri]);
@@ -11,6 +18,17 @@ export default function Player({ accessToken, trackUri, playingTrack }) {
   if (!accessToken) return null;
   return (
     <div className="player_container">
+      <div className="mobileSearch">
+        <div className="songs">
+          {searchResults.map((track) => (
+            <TrackSearchResult
+              track={track}
+              key={track.uri}
+              chooseTrack={chooseTrack}
+            />
+          ))}
+        </div>
+      </div>
       <div className="gif_container">
         <Gifs playingTrack={playingTrack} play={play} />
       </div>

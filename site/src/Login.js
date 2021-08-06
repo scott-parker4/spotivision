@@ -2,8 +2,8 @@ import React from 'react';
 import './css/login.css';
 
 const AUTH_URL =
-  'https://accounts.spotify.com/authorize?client_id=cb4b7f6508944aa380ace0748edb7452&response_type=code&redirect_uri=http://localhost:3000&scope=streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state';
-//  https://tender-heyrovsky-54413e.netlify.app
+  'https://accounts.spotify.com/authorize?client_id=cb4b7f6508944aa380ace0748edb7452&response_type=code&redirect_uri=https://tender-heyrovsky-54413e.netlify.app&scope=streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state';
+//  https://tender-heyrovsky-54413e.netlify.app  http://localhost:3000
 export default function Login() {
   return (
     <div className="loginContainer">

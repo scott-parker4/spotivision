@@ -8,6 +8,6 @@ Spotivision is a spotify player that also plays gifs! When you choose a track, g
 
 ### Status:
 
--Frontend deployed to Netlify
--Backend deployed to Heroku
--Working on minor fixes to ui
+- Frontend deployed to Netlify
+- Backend deployed to Heroku
+- Working on minor fixes to ui

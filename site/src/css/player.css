@@ -15,6 +15,7 @@
   justify-content: center;
   background-color: black;
   height: 100%;
+  overflow: hidden;
 }
 
 .spotify_player_container {
@@ -29,10 +30,6 @@
   .player_container {
     margin-right: 0;
   }
-
-  /* .spotify_player_container {
-    height: 20%;
-  } */
 
   .PlayerRSWP {
     height: 100%;

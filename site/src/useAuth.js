@@ -6,8 +6,6 @@ export default function useAuth(code) {
   const [refreshToken, setRefreshToken] = useState();
   const [expiresIn, setExpiresIn] = useState();
 
-  // http://localhost:3001
-
   useEffect(() => {
     axios
       .post('https://spotivision-express.herokuapp.com/login', {

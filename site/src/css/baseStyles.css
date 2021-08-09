@@ -15,6 +15,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  background-color: var(--darkGrey);
 }
 
 .main_container {
@@ -25,7 +26,7 @@ body {
   max-height: 100vh;
   font-size: 2rem;
   background-color: var(--black);
-  min-width: 375px;
+  min-width: 320px;
 }
 
 a {

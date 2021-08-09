@@ -1,2 +1,2 @@
-.env
-node_modules
+site/.env
+site/node_modules
